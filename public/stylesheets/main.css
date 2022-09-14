@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(https://wallpaperaccess.com/full/3018587.jpg);
+    background-size: contain;
+    background-attachment: fixed;
+}
+
+.chars {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+}
+
+a, button {
+    border: 1px solid black;
+    padding: 0.25rem 0.5rem;
+    background-color: rgb(41, 135, 212);
+    color: white;
+    font-size: 0.8rem;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 1.1em;
+}
+
+.char header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:0 1rem;
+    background-color: rgb(152, 147, 89);
+    border-top-left-radius: 1.2em;
+    border-top-right-radius: 1.2em;
+}
+
+.char img {
+    width: 100%;
+    height: 400px;
+    object-fit: contain;
+}
+
+.char .controls {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.char h2 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.char {
+    background-color: rgba(128, 128, 128, 40%);
+    border-radius: 1.4em;
+}

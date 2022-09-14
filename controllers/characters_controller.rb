@@ -42,7 +42,7 @@ put '/characters/:id' do
     redirect '/'
 end
 
-post '/characters/:id/heart' do
+post '/characters/:id/hearts' do
     char_id = params['id']
     user_id = session['user_id']
 

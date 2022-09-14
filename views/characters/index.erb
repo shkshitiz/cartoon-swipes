@@ -9,42 +9,38 @@
 
         <button>Logout</button>
         </form>
+        
+        <a href="/hearts/">My Hearts</a>
 
         <a href="/characters/new">Add character</a>
     </section>
-
-    <section class="chars">
-        <% chars.each do |char| %>
-            <section class="char">
-                <header>
-                    <h2><%= char['name'] %></h2>
-
-                    <section class="controls">
-                        <a href="/characters/<%= char['id'] %>/edit">Edit</a>
-
-                        <form action="" method="">
-                            <button>Next</button>
-                        </form>
-
-                        <form action="" method="">
-                            <button>Previous</button>
-                        </form>
-
-                        <form action="/characters/<%= char['id'] %>/hearts" method="POST">
-                            <button class='heart-btn'>Heart</button>
-                        </form>
-                    </section>
-                </header>
-
-                <img src="<%= char['image_url'] %>" alt="">
-                <p><%= char['quote'] %></p>
-            </section>
-        <% end %>
-    </section>
-
 <% else %>
     <header>
         <a href="/users/new">Sign up</a>
         <a href="/sessions/new">Login</a>
     </header>
 <% end %>
+
+<section class="chars">
+    <% chars.each do |char| %>
+        <section class="char">
+            <header>
+                <h2><%= char['name'] %></h2>
+
+                <section class="controls">
+                    <a href="">Previous</a>
+                    <a href="">Next</a>
+
+                    <% if logged_in? %>
+                        <form action="/characters/<%= char['id'] %>/hearts" method="POST">
+                            <button class='heart-btn'>Heart</button>
+                        </form>
+                    <% end %>
+                </section>
+            </header>
+
+            <img src="<%= char['image_url'] %>" alt="">
+            <p><%= char['quote'] %></p>
+        </section>
+    <% end %>
+</section>

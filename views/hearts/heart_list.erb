@@ -1,0 +1,27 @@
+<% chars.each do |char| %>
+            <section class="char">
+                <header>
+                    <h2><%= char['name'] %></h2>
+
+                    <section class="controls">
+                        <a href="/characters/<%= char['id'] %>/edit">Edit</a>
+
+                        <form action="" method="">
+                            <button>Next</button>
+                        </form>
+
+                        <form action="" method="">
+                            <button>Previous</button>
+                        </form>
+
+                        <form action="/hearts/<%= char['id'] %>" method="POST">
+                        <input type="hidden" name="_method" value="delete">
+                            <button class='heart-btn'>Unheart</button>
+                        </form>
+                    </section>
+                </header>
+
+                <img src="<%= char['image_url'] %>" alt="">
+                <p><%= char['quote'] %></p>
+            </section>
+        <% end %>

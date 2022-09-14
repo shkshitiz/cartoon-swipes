@@ -10,6 +10,7 @@ enable :sessions
 require './controllers/characters_controller'
 require './controllers/users_controller'
 require './controllers/sessions_controller'
+require './controllers/hearts_controller'
 
 require './helpers/sessions_helper'
 
