@@ -8,11 +8,11 @@ get '/' do
     }
 end
 
-get '/chars/new' do
-    erb :'chars/new'
+get '/characters/new' do
+    erb :'characters/new'
 end
 
-post '/chars' do
+post '/characters' do
     name = params['name']
     quote = params['quote']
     image_url = params['image_url']
@@ -22,17 +22,17 @@ post '/chars' do
     redirect '/'
 end
 
-get '/chars/:id/edit' do
+get '/characters/:id/edit' do
     id = params['id']
 
     char = get_char(id)
 
-    erb :'chars/edit', locals: {
+    erb :'characters/edit', locals: {
         char: char
     }
 end
 
-put '/chars/:id' do
+put '/characters/:id' do
     id = params['id']
     name = params['name']
     quote = params['quote']
@@ -42,7 +42,7 @@ put '/chars/:id' do
     redirect '/'
 end
 
-post '/chars/:id/heart' do
+post '/characters/:id/heart' do
     char_id = params['id']
     user_id = session['user_id']
 

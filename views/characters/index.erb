@@ -20,7 +20,7 @@
                     <h2><%= char['name'] %></h2>
 
                     <section class="controls">
-                        <a href="/chars/<%= char['id'] %>/edit">Edit</a>
+                        <a href="/characters/<%= char['id'] %>/edit">Edit</a>
 
                         <form action="" method="">
                             <button>Next</button>
@@ -30,7 +30,7 @@
                             <button>Previous</button>
                         </form>
 
-                        <form action="/chars/<%= char['id'] %>/hearts" method="POST">
+                        <form action="/characters/<%= char['id'] %>/hearts" method="POST">
                             <button class='heart-btn'>Heart</button>
                         </form>
                     </section>
