@@ -1,0 +1,13 @@
+<h1>Edit <%= char['name']%></h1>
+
+<form action="/chars/<%= char['id'] %>" method="POST">
+    <input type="hidden" name="_method" value="put">
+
+    <label for="">Quote: </label>
+    <input type="text" name="quote" value="<%= char['quote'] %>">
+
+    <label for="">Image URL: </label>
+    <input type="text" name="image_url" value="<%= food['image_url'] %>">
+
+    <button>Update char</button>
+</form>
