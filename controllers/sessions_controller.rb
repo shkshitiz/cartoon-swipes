@@ -15,6 +15,8 @@ post '/sessions' do
         session['user_id'] = user['id']
 
         redirect '/'
+    else
+        redirect '/sessions/new'
     end
 end
 
