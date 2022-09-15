@@ -7,6 +7,8 @@ myFantasy_Heart is an app to hold your favourite fictional characters in your ac
 
 
 ## :pencil2: Planning & Problem Solving
+### Wireframe 
+- [Click here](https://wireframe.cc/R8RCv4) to view my wireframe.
 
 ### Planning
 - Use trello to mark down requirements and ideas
